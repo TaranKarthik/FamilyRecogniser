@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Member Recogniser</title>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="header">
+            <h1>Image Recogniser</h1>
+            <p>WARNING- Very particular. If son, please SIT IN THE MIDDLE OF WEBCAM WITH NO SMILE. If Dad, it is recommended you stand up. If Mom, well, its fine i guess.</p>
+
+        </div>
+        <div class="body">
+            <p>The program can identify- </p>
+            <ul style="list-style: none;">
+                <li>Son/Boy</li>
+                <li>Mom/Aunt/GrandMother</li>
+                <li>Pet</li>
+                <li>Dad/Uncle</li>
+            </ul>
+            <br>
+            <div class="cameraThingy" id="camera">
+
+            </div>
+            <p>Your camera will display here.</p>
+            <br>
+            
+            <button class="primaryButton" onclick="snap()">Take Picture</button>
+            <br>
+            <br>
+            <div class="cameraThingy" id="result">
+
+            </div>
+            <p>Your photo will display here.</p>
+            <br>
+            <button class="primaryButton"  onclick="check()">Identify Family Member.</button>
+            <br>
+            <br>
+            <p>Object: <span id="objThing"></span></p>
+            <p>Accuracy: <span id="AccThing"></span></p>
+        </div>
+        
+
+    </div>
+    <script src="INDEX.JS"></script>
+
+
+
+
+
+</body>
+
+</html>
